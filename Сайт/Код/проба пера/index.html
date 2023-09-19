@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Четыре правила вёрстки</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image" href="https://code.s3.yandex.net/web-code/rules-favicon.ico">
+</head>
+<body>
+  <div id="main_page">
+    <div class="topnav">
+      <a class="active" href="#">Главная</a>
+      <a href = "#" onclick = "document.getElementById('main_page').style.display='none'; document.getElementById('news').style.display='block';">Новости</a>
+      <a href = "#" onclick = "document.getElementById('main_page').style.display='none'; document.getElementById('catalog').style.display='block';">Каталог</a>
+      <a href = "#" onclick = "document.getElementById('main_page').style.display='none'; document.getElementById('contacts').style.display='block';">Контакты</a>
+    </div>
+    <header class="header">
+      <div class="overlay">
+        <h1 class="header-title">Setner store</h1>
+      </div>
+    </header>
+    <section class="content">
+      <div class="card">
+        <img class="card-image" src="photos/Футболка-главная.png">
+        <h3 class="card-title">Футболки</h3>
+        <p class="card-text">В нашем ассортименте Вы найдете базовые белую и черную футболки, которые можно носить в свободной непринужденной обстановке и деловых выходов.</p>
+      </div>
+      <div class="card no-right-margin">
+        <img class="card-image" src="photos/Бейсболка-главная.png">
+        <h3 class="card-title">Бейсболки</h3>
+        <p class="card-text">Летом этот головной убор сбережет от жары, а козырек защитит глаза во время отдыха или туристической поездки не хуже солнцезащитных очков.</p>
+      </div>
+      <div class="card">
+        <img class="card-image" src="photos/Лонгслив-главная.png">
+        <h3 class="card-title">Лонгсливы</h3>
+        <p class="card-text">Кофта оверсайз имеет довольно длинный рукав – можно носить его навыпуск или закатать.</p>
+      </div>
+      <div class="card no-right-margin">
+        <img class="card-image" src="photos/Худи.png">
+        <h3 class="card-title">Худи</h3>
+        <p class="card-text">Легкая толстовка унисекс – это отличное дополнение к стильному образу в любое время года.</p>
+      </div>
+    </section>
+    <footer class="footer">
+      <h5 class="footer-author">2019-2023 © Setner Store — модный интернет-магазин одежды. Доставка по всей России.</h5>
+    </footer>
+  </div>
+  <div id="news" style='display: none'>
+    <div class="topnav">
+      <a href = "#" onclick = "document.getElementById('news').style.display='none'; document.getElementById('main_page').style.display='block';">Главная</a>
+      <a class="active" href = "#">Новости</a>
+      <a href = "#" onclick = "document.getElementById('news').style.display='none'; document.getElementById('catalog').style.display='block';">Каталог</a>
+      <a href = "#" onclick = "document.getElementById('news').style.display='none'; document.getElementById('contacts').style.display='block';">Контакты</a>
+    </div>
+    <!-- код второй страницы начало карусели-->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img clas="slide-img" src="photos/карусель.jpg">
+        <div class="text">Caption One</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img clas="slide-img" src="photos/карусель.jpg">
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img clas="slide-img" src="photos/карусель.jpg">
+        <div class="text">Caption Three</div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script src="js/script.js"></script>
+    <!-- конец карусели -->
+    <footer class="footer">
+      <h5 class="footer-author">2019-2023 © Setner Store — модный интернет-магазин одежды. Доставка по всей России.</h5>
+    </footer>
+  </div>
+  <div id="catalog" style='display: none'>
+    <div class="topnav">
+      <a href = "#" onclick = "document.getElementById('catalog').style.display='none'; document.getElementById('main_page').style.display='block';">Главная</a>
+      <a href = "#" onclick = "document.getElementById('catalog').style.display='none'; document.getElementById('news').style.display='block';">Новости</a>
+      <a class="active" href = "#">Каталог</a>
+      <a href = "#" onclick = "document.getElementById('catalog').style.display='none'; document.getElementById('contacts').style.display='block';">Контакты</a>
+    </div>
+    <!-- код третьей страницы -->
+    <section class="content-2">
+      <!-- 1 отдел -->
+      <h3 class="main-text first">Футболки</h3>
+      <div class="card-2">
+        <img class="card-image" src="photos/Футболка.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Футболка мужская/женская оверсайз</p>
+      </div>
+      <div class="card-2">
+        <img class="card-image" src="photos/Футболка1.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Футболка мужская/женская оверсайз</p>
+      </div>
+      <div class="card-2">
+        <img class="card-image" src="photos/Футболка2.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Футболка мужская/женская оверсайз</p>
+      </div>
+      <div class="card-2 no-right-margin">
+        <img class="card-image" src="photos/Футболка3.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Футболка мужская/женская оверсайз</p>
+      </div>
+      <div class="arrow">
+        <img class = "arrow-image" src="photos/arrow.png">
+      </div>
+      <!-- 2 отдел -->
+      <h3 class="main-text">Бейсболки</h3>
+      <div class="card-2">
+        <img class="card-image" src="photos/Бейсболка.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Бейсболка мужская/женская летняя</p>
+      </div>
+      <div class="card-2">
+        <img class="card-image" src="photos/Бейсболка1.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Бейсболка мужская/женская летняя</p>
+      </div>
+      <div class="card-2">
+        <img class="card-image" src="photos/Бейсболка2.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Бейсболка мужская/женская летняя</p>
+      </div>
+      <div class="card-2 no-right-margin">
+        <img class="card-image" src="photos/Бейсболка3.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Бейсболка мужская/женская летняя</p>
+      </div>
+      <div class="arrow">
+        <img class = "arrow-image" src="photos/arrow.png">
+      </div>
+      <!-- 3 отдел -->
+      <h3 class="main-text">Худи</h3>
+      <div class="card-2">
+        <img class="card-image" src="photos/Худи1.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Худи мужское/женское оверсайз</p>
+      </div>
+      <div class="card-2">
+        <img class="card-image" src="photos/Худи2.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Худи мужское/женское оверсайз</p>
+      </div>
+      <div class="card-2">
+        <img class="card-image" src="photos/Худи3.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Худи мужское/женское оверсайз</p>
+      </div>
+      <div class="card-2 no-right-margin">
+        <img class="card-image" src="photos/Худи4.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Худи мужское/женское оверсайз</p>
+      </div>
+      <div class="arrow">
+        <img class = "arrow-image" src="photos/arrow.png">
+      </div>
+      <!-- 4 отдел -->
+      <h3 class="main-text">Лонгсливы</h3>
+      <div class="card-2">
+        <img class="card-image" src="photos/Лонгслив.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Худи мужское/женское оверсайз</p>
+      </div>
+      <div class="card-2">
+        <img class="card-image" src="photos/Лонгслив1.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Худи мужское/женское оверсайз</p>
+      </div>
+      <div class="card-2">
+        <img class="card-image" src="photos/Лонгслив2.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Худи мужское/женское оверсайз</p>
+      </div>
+      <div class="card-2 no-right-margin">
+        <img class="card-image" src="photos/Лонгслив3.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Худи мужское/женское оверсайз</p>
+      </div>
+      <div class="arrow">
+        <img class = "arrow-image" src="photos/arrow.png">
+      </div>
+      <!-- БАННЕРЫ -->
+      <h3 class="main-text">В наличии также есть:</h3>
+      <div class="card-2">
+        <img class="card-image" src="photos/Свитер.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Свитер оверсайз вязанный с принтом</p>
+      </div>
+      <div class="card-2">
+        <img class="card-image" src="photos/Свитер1.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Свитер оверсайз вязанный с принтом</p>
+      </div>
+      <div class="card-2">
+        <img class="card-image" src="photos/Сумка.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Шоппер мужской/женский холщовый</p>
+      </div>
+      <div class="card-2 no-right-margin">
+        <img class="card-image" src="photos/Свитшот.png">
+        <h3 class="card-title-2">Setner/</h3>
+        <p class="card-text">Свитшот мужской/женский оверсайз</p>
+      </div>
+      <div class="arrow">
+        <img class = "arrow-image" src="photos/arrow.png">
+      </div>
+    </section>
+    <footer class="footer">
+      <h5 class="footer-author">2019-2023 © Setner Store — модный интернет-магазин одежды. Доставка по всей России.</h5>
+    </footer>
+  </div>
+  <div id="contacts" style='display: none'>
+    <div class="topnav">
+      <a href = "#" onclick = "document.getElementById('contacts').style.display='none'; document.getElementById('main_page').style.display='block';">Главная</a>
+      <a href = "#" onclick = "document.getElementById('contacts').style.display='none'; document.getElementById('news').style.display='block';">Новости</a>
+      <a href = "#" onclick = "document.getElementById('contacts').style.display='none'; document.getElementById('catalog').style.display='block';">Каталог</a>
+      <a class="active" href = "#">Контакты</a>
+    </div>
+    <!-- код четвёртой страницы -->
+    <main>
+      <div class="description">
+        <h1 class="description-headline">Контактная информация</h1>
+        <p class="description-text">Свяжитесь с нами, если у вас есть вопросы или предложения по сотрудничеству. Мы всегда рады новым знакомствам.</p>
+      </div>
+      <div class="contacts-block">
+        <div class="contacts-block-half">
+          <table class="table">
+            <caption class="table-header">Наши филиалы</caption>
+            <thead>
+              <th>Setner Store в Перми</th>
+              <th>Setner Store в Москве</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>+7 (571) 313-48-88</td>
+                <td>+7 (473) 438-85-86</td>
+              </tr>
+              <tr>
+                <td>info@stnr-prm.ru</td>
+                <td>info@stnr-msk.ru</td>
+              </tr>
+              <tr>
+                <td>iMALL Эспланада</td>
+                <td>ГУМ</td>
+              </tr>
+              <tr>
+                <td>Петропавловская улица, 73А</td>
+                <td>Красная площадь, 3</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="left-side">
+            <h3 class="contacts-block-headline" id="contactSpb">Setner Store на Wildberries</h3> <br> www.wildberries.ru/brands/setner
+          </div>
+        </div>
+        <form class="contacts-block-half contacts-block__form-wrapper">
+          <h3 class="contacts-block-headline">Обратная связь</h3>
+          <div class="contacts-block__form-item-wrapper">
+            <span class="contacts-block__form-item-name">Представьтесь</span>
+            <input class="contacts-block__form-item" type="text" placeholder="ФИО">
+          </div>
+          <div class="contacts-block__form-item-wrapper">
+            <span class="contacts-block__form-item-name">E-mail</span>
+            <input class="contacts-block__form-item" type="email"  placeholder="andreeva@prg-it.ru">
+          </div>
+          <div class="contacts-block__form-item-wrapper">
+            <span class="contacts-block__form-item-name">Телефон</span>
+            <input class="contacts-block__form-item phone-form" type="text" placeholder="+7 900 000 00 00">
+          </div>
+          <div class="contacts-block__form-item-wrapper">
+            <span class="contacts-block__form-item-name">Ваше сообщение</span>
+            <input class="contacts-block__form-item contacts-block__form-item_text" type="text" placeholder="Текст" optional="">
+          </div>
+          <button class="contacts-block__submit js--job-form-submit" type="button">Отправить</button>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <h5 class="footer-author">2019-2023 © Setner Store — модный интернет-магазин одежды. Доставка по всей России.</h5>
+    </footer>
+  </div>
+  </div>
+</body>
+</html>

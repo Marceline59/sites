@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+	<title>Js</title>
+</head>
+
+<body>
+  <div class = "back_in_black">
+    <p class="text">Уровень громкости</p>
+    <div id="slider" class="slider">
+      <div class="thumb"></div>
+    </div>
+  </div>
+
+  <script>
+    let thumb = slider.querySelector('.thumb');
+    thumb.onmousedown = function(event) {
+      event.preventDefault();
+      let shiftX = event.clientX - thumb.getBoundingClientRect().left;
+      document.addEventListener('mousemove', onMouseMove);
+      document.addEventListener('mouseup', onMouseUp);
+      function onMouseMove(event) {
+        let newLeft = event.clientX - shiftX - slider.getBoundingClientRect().left;
+        if (newLeft < 0) {
+          newLeft = 0;
+        }
+        let rightEdge = slider.offsetWidth - thumb.offsetWidth;
+        if (newLeft > rightEdge) {
+          newLeft = rightEdge;
+        }
+
+        thumb.style.left = newLeft + 'px';
+      }
+
+      function onMouseUp() {
+        document.removeEventListener('mouseup', onMouseUp);
+        document.removeEventListener('mousemove', onMouseMove);
+      }
+    };
+
+    thumb.ondragstart = function() {
+      return false;
+    };
+  </script>
+  <!-- <p>Перетащите мяч.</p>
+  <img src="https://en.js.cx/clipart/soccer-gate.svg" id="gate" class="droppable">
+  <img src="https://en.js.cx/clipart/ball.svg" id="ball">
+  <script>
+    let currentDroppable = null;
+
+    ball.onmousedown = function(event) {
+      let shiftX = event.clientX - ball.getBoundingClientRect().left;
+      let shiftY = event.clientY - ball.getBoundingClientRect().top;
+      ball.style.position = 'absolute';
+      ball.style.zIndex = 1000;
+      document.body.append(ball);
+      moveAt(event.pageX, event.pageY);
+
+      function moveAt(pageX, pageY) {
+        ball.style.left = pageX - shiftX + 'px';
+        ball.style.top = pageY - shiftY + 'px';
+      }
+
+      function onMouseMove(event) {
+        moveAt(event.pageX, event.pageY);
+        ball.hidden = true;
+        let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+        ball.hidden = false;
+        if (!elemBelow) return;
+        let droppableBelow = elemBelow.closest('.droppable');
+        if (currentDroppable != droppableBelow) {
+          if (currentDroppable) {
+            leaveDroppable(currentDroppable);
+          }
+          currentDroppable = droppableBelow;
+          if (currentDroppable) {
+            enterDroppable(currentDroppable);
+          }
+        }
+      }
+      document.addEventListener('mousemove', onMouseMove);
+
+      ball.onmouseup = function() {
+        document.removeEventListener('mousemove', onMouseMove);
+        ball.onmouseup = null;
+      };
+    };
+
+    function enterDroppable(elem) {
+      elem.style.background = 'pink';
+    }
+
+    function leaveDroppable(elem) {
+      elem.style.background = '';
+    }
+
+    ball.ondragstart = function() {
+      return false;
+    };
+  </script> -->
+  <!-- <p>Кликни на студента, чтобы выделить его.</p>
+  <br>
+
+  <ul id="ul">
+    <li>Полынский Арсений</li>
+    <li>Кулаков Андрей</li>
+    <li>Гявгянен Артём</li>
+    <li>Валиев Антон</li>
+    <li>Лев Николаевич</li>
+  </ul>
+
+  <script>
+    ul.onclick = function(event) {
+      if (event.target.tagName != "LI") return;
+
+      if (event.ctrlKey || event.metaKey) {
+        toggleSelect(event.target);
+      } else {
+        singleSelect(event.target);
+      }
+    }
+
+    ul.onmousedown = function() {
+      return false;
+    };
+
+    function toggleSelect(li) {
+      li.classList.toggle('selected');
+    }
+
+    function singleSelect(li) {
+      let selected = ul.querySelectorAll('.selected');
+      for(let elem of selected) {
+        elem.classList.remove('selected');
+      }
+      li.classList.add('selected');
+    }
+  </script> -->
+  <!-- <br>
+  <br>
+  <br>
+  <blockquote>
+    Teacher: Why are you late?
+    Student: There was a man who lost a hundred dollar bill.
+    Teacher: That's nice. Were you helping him look for it?
+    Student: No. I was standing on it.
+  </blockquote>
+
+  <script>
+    function positionAt(anchor, position, elem) {
+
+      let anchorCoords = anchor.getBoundingClientRect();
+
+      switch (position) {
+        case "top":
+          elem.style.left = anchorCoords.left + "px";
+          elem.style.top = anchorCoords.top - elem.offsetHeight + "px";
+          break;
+
+        case "right":
+          elem.style.left = anchorCoords.left + anchor.offsetWidth + "px";
+          elem.style.top = anchorCoords.top + "px";
+          break;
+
+        case "bottom":
+          elem.style.left = anchorCoords.left + "px";
+          elem.style.top = anchorCoords.top + anchor.offsetHeight + "px";
+          break;
+      }
+    }
+
+    function showNote(anchor, position, html) {
+      let note = document.createElement('div');
+      note.className = "note";
+      note.innerHTML = html;
+      document.body.append(note);
+
+      positionAt(anchor, position, note);
+    }
+
+    let blockquote = document.querySelector('blockquote');
+
+    showNote(blockquote, "top", "note above");
+    showNote(blockquote, "right", "note at the right");
+    showNote(blockquote, "bottom", "note below");
+  </script> -->
+  <!-- <textarea class ="areatxt" id="area" placeholder="Ваш текст здесь"></textarea>
+  <br>
+  <button onclick="localStorage.removeItem('area');area.value=''">Очистить</button>
+  <script>
+      area.value = localStorage.getItem('area');
+      area.oninput = () => {
+        localStorage.setItem('area', area.value)
+      };
+  </script> -->
+  <!-- <script src="js/script.js">
+    let div = document.createElement('div');
+    div.className = "alert";
+    div.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
+    document.body.append(div);
+
+    setTimeout(() => div.remove(), 2000);    
+  </script> -->
+</body>
+</html>
